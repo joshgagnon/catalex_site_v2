@@ -1,0 +1,54 @@
+$header-height: 150px;
+$header-height-sml: 75px;
+
+nav.navbar{
+    background-color: white;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+    margin-bottom:0;
+    @media (min-width: $screen-sm-min) {
+      .navbar-nav{
+            li{
+                height: $header-height;
+                a{
+                    font-size: 24px;
+                    line-height: $header-height;
+                }
+            }
+        }
+
+        a.navbar-brand{
+            height: auto;
+            img{
+                margin-left:40px;
+            }
+        }
+
+    }
+
+
+    .navbar-nav{
+        display:block;
+        margin: 0;
+        padding:0;
+        list-style: none;
+
+        li{
+            display:block;
+            padding: 0 24px;
+            a{
+                color: $text-color;
+                text-shadow:none;
+                padding:0;
+            }
+            &.active, &.active a{
+                background-color: $light-red;
+                color: white;
+            }
+        }
+    }
+
+}

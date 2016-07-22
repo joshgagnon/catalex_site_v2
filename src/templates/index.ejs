@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="CataLex - Reinventing Law"/>
+  <link href="app.css" rel="stylesheet"></head>
+
+  <body>
+
+    <%= require('ejs!./header.ejs')({active: 'index'}) %>
+  <section class="top">
+
+    <div class="services container">
+    <h1>CataLex Services</h1>
+
+     <div class="row">
+        <div class="col-md-6">
+            <div class="service">
+                <div class="service-logo law-browser-logo"></div>
+                <h3>Law Browser</h3>
+                <p>
+                    Find law faster and easier than ever before.  Definition
+                    recognition, automatic cross-references, side-by-side
+                    browsing, and more!
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="service">
+                <div class="service-logo law-browser-logo"></div>
+                <h3>Good Companies</h3>
+                <p>
+                    Takes care of a company’s disclosure and administrative requirements under the Companies Act 1993.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="service">
+                <div class="service-logo law-browser-logo"></div>
+                <h3>Working Days</h3>
+                <p>
+                    Calculates legal deadlines based on common definitions of “working day”. 
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="service">
+                <div class="service-logo law-browser-logo"></div>
+                <h3>Concat</h3>
+                <p>
+                    Concatenates (combines) PDF documents quickly and securely with ConCat.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    </section>
+
+
+
+<section class="description">
+
+  <div className="container">
+  <h1>CataLex | The Legal Catalyst</h1>
+  <p>
+At CataLex, we aim to re-invent law or, more accurately, how the public interacts with it. We believe that by combining technology and innovative thinking, legal services can be more accessible, cost-effective, understandable, and, most importantly, useful to business. CataLex is developing software to deliver those services to professionals and businesses, absent the traditional lawyer-client relationship.
+  </p>
+  </div>
+
+</section>
+
+
+
+
+
+
+<section class="fb">
+  <h1>Follow us on Facebook</h1>
+<div class="fb-container">
+      <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-page" data-href="https://www.facebook.com/CataLex-1728497920712593/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/CataLex-1728497920712593/"><a href="https://www.facebook.com/CataLex-1728497920712593/">CataLex</a></blockquote></div></div>
+</div>
+
+</section>
+
+  <section class="team">
+
+  <div class="container">
+  <h1>The Team</h1>
+  <div class="row">
+  <div class="col-md-4">
+
+    <div class="person">
+        <img src="images/thomas.jpg"/>
+        <div class="name">Thomas Bloy</div>
+        <div class="title">Director &amp; Co Founder</div>
+        <div class="email"><a href="mailto:thomas@catalex.nz">thomas@catalex.nz</a></div>
+        <div class="phone"><a href="tel:+64274538552">+64 27 453 8552</a></div>
+    </div>
+    </div>
+  <div class="col-md-4">
+    <div class="person">
+        <img src="images/tamina.jpg"/>
+        <div class="name">Tamina Cunningham-Adams</div>
+        <div class="title">Director &amp; Co Founder</div>
+        <div class="email"><a href="mailto:tamina@catalex.nz">tamina@catalex.nz</a></div>
+        <div class="phone"><a href="tel:+64211515137">+64 21 151 5137</a></div>
+    </div>
+    </div>
+  <div class="col-md-4">
+    <div class="person">
+        <img src="images/josh.jpg"/>
+        <div class="name">Josh Gagnon</div>
+        <div class="title">Chief Technology Officer</div>
+        <div class="email"><a href="mailto:josh@catalex.nz">josh@catalex.nz</a></div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+</section>
+
+
+
+
+    <%= require('ejs!./footer.ejs')() %>
+  <script type="text/javascript" src="app.js"></script></body>
+</html>
