@@ -34,6 +34,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 @import "header";
+
 html {
   position: relative;
   min-height: 100%;
@@ -41,33 +42,47 @@ html {
 
 
 $footer-height: 150px;
+$footer-height-xs: 220px;
+$section-padding: 20px;
+
 
 footer{
     height: $footer-height;
     background-color: $text-color;
     color: $gray-text;
     position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     text-align:center;
     font-size:0.8em;
-
     a {
         color: $light-red;
         margin: 0 10px;
     }
+    .container{
+    background-color: $text-color;
+    }
 }
+
 body {
     font-family: Ubuntu,sans-serif;
   /* Margin bottom by footer height */
   margin-bottom: $footer-height;
   -webkit-font-smoothing: antialiased;
 }
+
 h1{
-        font-size: 2.2em;
+    font-size: 2.2em;
+    font-weight: 500;
 }
-$section-padding:20px;
+
+
+.btn-primary {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    transition:  all 0.5s ease-out;
+}
 
 .top{
     background-image: url('/images/hero-bg.jpg');
@@ -83,6 +98,20 @@ $section-padding:20px;
         }
         p{
             margin-top: 0;
+        }
+    }
+    .good-companies{
+        padding: 120px 0 40px 0;
+        h1{
+            margin-bottom:0;
+        }
+        h2{
+            margin-top: 0;
+            font-weight: 500;
+                font-size: 1.25em;
+        }
+        h5{
+            font-size: 1em;
         }
     }
 }
@@ -132,6 +161,7 @@ $section-padding:20px;
             font-size: 24px;
         }
         text-align:left;
+        padding-bottom: 40px;
     }
     padding: $section-padding;
 }
@@ -139,9 +169,10 @@ $section-padding:20px;
 
 
 .browser-hero {
-    background: #A7181E $header-image no-repeat center top;
+    background: $deep-red $header-image repeat center top;
     color: #ffffff;
-    text-align:center
+    text-align:center;
+    padding:40px;
      h1 {
         margin-bottom: 50px;
     }
@@ -157,12 +188,15 @@ $section-padding:20px;
         width: 222px;
         padding-top: 11px;
         padding-bottom: 11px;
-        margin: 0 16px;
+        margin: 0;
         color: inherit;
     }
     .slogan {
         font-size: 30px;
         margin-bottom: 62px;
+    }
+    img{
+        max-width: 100%;
     }
 }
 
@@ -181,7 +215,7 @@ $section-padding:20px;
 .odd .fa {
     color: $text-color;
 }
-
+.odd +.even:before,
 .even + .odd:before {
     content: '';
     width: 0;
@@ -194,6 +228,7 @@ $section-padding:20px;
 .even + .odd:before {
     border-color: #ffffff transparent transparent transparent;
 }
+
 .odd + .even:before {
     border-color: $light-gray transparent transparent transparent;
 }
@@ -203,13 +238,19 @@ $section-padding:20px;
 .scroll-row{
     overflow:hidden;
     section{
-        padding: 50px;
+        padding:  70px 20px;
+    }
+    h2 {
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        color: $light-red;
+
     }
     h3 {
         font-size: 28px;
-        font-size: 50px;
         margin: 0 0 10px;
-        font-weight: 500;
+        font-weight: 300;
     }
     .icon-inner {
         position: absolute;
@@ -217,15 +258,19 @@ $section-padding:20px;
         transform: translateY(-50%);
     }
     .icon-pad {
-        padding-left: 152px;
+        padding-left: 0px;
     }
     .fa{
         font-size: 130px;
     }
 
     @media (min-width: $screen-md-min) {
+        section{
+            padding: 80px;
+        }
+
          h3 {
-            font-size: 50px;
+            font-size: 40px;
         }
         .icon-pad {
             padding-left: 186px;
@@ -242,8 +287,8 @@ $section-padding:20px;
 .fade-container {
     opacity: 0;
     transition-property: opacity, margin-left, margin-right;
-    transition-duration: 1800ms;
-    transition-delay: 300ms;
+    transition-duration: 1300ms;
+    transition-delay: 100ms;
 }
 .odd .fade-container {
     margin-left: -200px;
