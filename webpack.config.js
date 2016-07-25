@@ -74,7 +74,10 @@ module.exports = {
         }) : function(){},
 
         !DEV ? new webpack.optimize.UglifyJsPlugin() : function(){},
-
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        }),
         new HtmlWebpackPlugin({
             title: 'CataLex®',
             //hash: true,
