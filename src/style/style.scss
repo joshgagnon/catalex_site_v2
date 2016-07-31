@@ -37,7 +37,8 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
-@import "header";
+@import "~catalex_shared/sass/catalex-header";
+@import "~catalex_shared/sass/catalex-footer";
 
 html {
   position: relative;
@@ -45,34 +46,11 @@ html {
 }
 
 
-$footer-height: 150px;
-$footer-height-xs: 220px;
 $section-padding: 20px;
-
-
-footer{
-    height: $footer-height;
-    background-color: $text-color;
-    color: $gray-text;
-    position:absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align:center;
-    font-size:0.8em;
-    a {
-        color: $light-red;
-        margin: 0 10px;
-    }
-    .container{
-    background-color: $text-color;
-    }
-}
 
 body {
     font-family: Ubuntu,sans-serif;
   /* Margin bottom by footer height */
-  margin-bottom: $footer-height;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -303,21 +281,21 @@ h1{
 
 
 
-.fade-container {
+.fade-container.animate {
     opacity: 0;
     transition-property: opacity, margin-left, margin-right;
     transition-duration: 1300ms;
     transition-delay: 100ms;
 }
-.odd .fade-container {
+.odd .fade-container.animate {
     margin-left: -200px;
     margin-right: 200px;
 }
-.even .fade-container {
+.even .fade-container.animate {
     margin-left: 200px;
     margin-right: -200px;
 }
-.fade-container.fade-in {
+.fade-container.fade-in.animate {
     opacity: 1;
     margin-left: 0px;
     margin-right: 0px;
