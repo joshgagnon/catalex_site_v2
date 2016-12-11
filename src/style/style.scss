@@ -71,7 +71,11 @@ h1{
 
     color:white;
     text-align: center;
-  padding:40px;
+
+  padding:8px;
+   @media (min-width: $screen-md-min) {
+        padding:40px;
+    }
     .service{
         padding:40px;
         h3{
@@ -100,6 +104,12 @@ h1{
         h5{
             font-size: 1em;
         }
+        h2{
+            font-size:30px;
+           @media (min-width: $screen-md-min) {
+                font-size:50px;
+            }
+        }
     }
 
      h1 {
@@ -122,6 +132,7 @@ h1{
         padding-bottom: 11px;
         margin: 0 12px;
         color: inherit;
+        margin-bottom: 11px;
     }
     .slogan {
         font-size: 30px;
@@ -132,8 +143,6 @@ h1{
     }
     a{
         color:white;
-
-
         &:hover{
             text-decoration:none;
         }
