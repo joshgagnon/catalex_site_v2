@@ -14,8 +14,9 @@ module.exports = {
     cache: true,
     output: {
         path:  path.resolve(__dirname, 'public'),
-        //filename: DEV ? "[name].js" : "[name].[hash].js"
-        filename: DEV ? "[name].js" : "[name].js"
+        filename: "[name].[hash].js",
+
+        //filename: DEV ? "[name].js" : "[name].js"
     },
     debug: DEV,
     devtool: null, //EV ? "source-map" : null,
@@ -56,7 +57,7 @@ module.exports = {
          { from: 'src/static', to: './' },
          ]),
         //new ExtractTextPlugin(DEV ? '[name].css' : '[name].[hash].css'),
-        new ExtractTextPlugin(DEV ? '[name].css' : '[name].css'),
+        new ExtractTextPlugin('[name].[hash].css'),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en-nz/),
         new webpack.optimize.DedupePlugin(),
         function() {
@@ -93,7 +94,7 @@ module.exports = {
           }),
         new HtmlWebpackPlugin({
             title: 'CataLex®',
-            //hash: true,
+            hash: true,
              filename: 'good-companies.html',
             template: 'src/templates/good-companies.ejs',
             inject: 'body'
