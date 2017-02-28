@@ -20,6 +20,8 @@ $btn-primary-bg: $light-red;
 $btn-primary-border: $light-red;
 $gray-text: #756f6f;
 $orange: #e74c3c;
+$dark-bg: #2d2829;
+$link-color: #4d8cc1;
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/normalize";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/grid";
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
@@ -164,7 +166,7 @@ h1{
 .fb{
     color:white;
     text-align: center;
-    background-color: $text-color;
+    background-color: $dark-bg;
     h1{
         font-weight:normal;
 
@@ -182,7 +184,7 @@ h1{
 .promo{
     color:white;
     text-align: center;
-    background-color: $text-color;
+    background-color: $dark-bg;
     h1, .sub-title{
         margin:0;
     }
@@ -228,7 +230,7 @@ h1{
     text-align: center;
     color:white;
     text-align: center;
-    background-color: $text-color;
+    background-color: $dark-bg;
     h1{
             font-weight: normal;
     }
