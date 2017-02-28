@@ -98,8 +98,13 @@ module.exports = {
              filename: 'good-companies.html',
             template: 'src/templates/good-companies.ejs',
             inject: 'body'
+          }),
+        new HtmlWebpackPlugin({
+            title: 'CataLex®',
+            hash: true,
+             filename: 'promo.html',
+            template: 'src/templates/promo.ejs'
           })
-
 
     ]
 }

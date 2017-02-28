@@ -192,7 +192,17 @@ h1{
         margin-bottom: 12px;
         margin-left: 12px;
     }
-       padding: $section-padding;
+    padding: $section-padding;
+
+    &.promo-iframe{
+        padding: $section-padding/2;
+        h1{
+        font-size:1.5em;
+        }
+        .btn{
+            margin-bottom: 0;
+        }
+    }
 
 }
 
