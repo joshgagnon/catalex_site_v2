@@ -66,6 +66,8 @@ h1{
     border-color: $orange;
     transition:  all 0.5s ease-out;
 }
+
+
 .top,
 .browser-hero{
     background: $deep-red $header-image repeat top center;
@@ -165,9 +167,31 @@ h1{
     background-color: $text-color;
     h1{
         font-weight:normal;
+
     }
-    min-height:600px;
+    min-height:546px;
+        padding: $section-padding;
+    .fb-container{
+        padding-bottom:20px;
+        @media (min-width: $screen-md-min) {
+            padding-bottom:0;
+        }
+    }
+}
+
+.promo{
+    color:white;
+    text-align: center;
+    background-color: $text-color;
+    h1, .sub-title{
+        margin:0;
+    }
+    .btn{
+        margin-bottom: 12px;
+        margin-left: 12px;
+    }
        padding: $section-padding;
+
 }
 
 .team {
@@ -200,7 +224,38 @@ h1{
     padding: $section-padding;
 }
 
-
+.news {
+    text-align: center;
+    color:white;
+    text-align: center;
+    background-color: $text-color;
+    h1{
+            font-weight: normal;
+    }
+    ul{
+        padding-left:0
+    }
+    li{
+       //list-style:none;
+        text-align:left;
+        padding-bottom:12px;
+        .headline{
+            font-size:1.2em;
+        }
+        .date{
+            //color:$light-gray;
+            &:after{
+                content: ' - ';
+            }
+        }
+        .subtitle{
+            color: darken($light-gray, 25%);
+            margin:0;
+            font-style:italic;
+        }
+    }
+      padding: $section-padding;
+}
 
 
 .odd {
@@ -311,4 +366,24 @@ h1{
     margin-right: 0px;
 }
 
+
+.videos{
+    text-align:center;
+    padding:30px;
+
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 

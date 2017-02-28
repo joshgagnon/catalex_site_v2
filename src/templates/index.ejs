@@ -11,23 +11,22 @@
   <body>
 
     <%= require('ejs!./header.ejs')({active: 'index'}) %>
+
+<section class="promo">
+
+  <div class="container">
+  <h1>Good Companies is here <a class="btn btn-primary" href="/good-companies.html">Click here to learn more</a></h1>
+
+  </div>
+
+</section>
+
+
+
   <section class="top">
 
     <div class="services container">
      <div class="row">
-        <div class="col-md-6">
-            <div class="service">
-            <a href="https://browser.catalex.nz/">
-                 <i class="fa fa-search"></i>
-                <h4>Law Browser</h4>
-                <p>
-                    Find law faster and easier than ever before.  Definition
-                    recognition, automatic cross-references, side-by-side
-                    browsing, and more!
-                </p>
-                 </a>
-            </div>
-        </div>
 
         <div class="col-md-6">
             <div class="service">
@@ -36,6 +35,19 @@
                 <h4>Good Companies</h4>
                 <p>
                     Takes care of a company’s disclosure and administrative requirements under the Companies Act 1993.
+                </p>
+                 </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="service">
+            <a href="/law-browser.html">
+                 <i class="fa fa-search"></i>
+                <h4>Law Browser</h4>
+                <p>
+                    Find law faster and easier than ever before.  Definition
+                    recognition, automatic cross-references, side-by-side
+                    browsing, and more!
                 </p>
                  </a>
             </div>
@@ -77,7 +89,7 @@
 
 <section class="description">
 
-  <div className="container">
+  <div class="container">
   <h1>CataLex | The Legal Catalyst</h1>
   <p>
 At CataLex, we aim to re-invent law or, more accurately, how the public interacts with it. We believe that by combining technology and innovative thinking, legal services can be more accessible, cost-effective, understandable, and, most importantly, useful to business. CataLex is developing software to deliver those services to professionals and businesses, absent the traditional lawyer-client relationship.
@@ -88,13 +100,15 @@ At CataLex, we aim to re-invent law or, more accurately, how the public interact
 
 
 
-
+    <%= require('ejs!./news.ejs')() %>
 
 
 <section class="fb">
-  <h1>Follow us on Facebook</h1>
+<div class="container">
+<div  class="row">
+ <div class="col-lg-6">
 <div class="fb-container">
-      <div id="fb-root"></div>
+      <div id="fb-root" ></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
@@ -105,7 +119,25 @@ At CataLex, we aim to re-invent law or, more accurately, how the public interact
 <div class="fb-page" data-href="https://www.facebook.com/CataLex-1728497920712593/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/CataLex-1728497920712593/"><a href="https://www.facebook.com/CataLex-1728497920712593/">CataLex</a></blockquote></div></div>
 </div>
 
+</div>
+
+<div  class="col-lg-6">
+<a class="twitter-timeline" data-width="500"  data-height="500" data-theme="light" href="https://twitter.com/catalexsoftware">Tweets by catalexsoftware</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</div>
 </section>
+
+
+<section class="videos">
+<div class="container">
+  <h1>Our YouTube Channel</h1>
+<div class="videoWrapper">
+<iframe width="900" height="515" src="https://www.youtube.com/embed/C5NHA7mhLBQ?list=UUBEN5yyR23LOWQsmWCSiU4g" rel=0  frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</section>
+
 
   <section class="team">
 
