@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <meta name="description" content="CataLex - Reinventing Law"/>
-<title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="icon"
-          type="image/png"
-          href="/favicon.png">
 
+ <%= require('ejs!./head.ejs')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
   <body>
-
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NXTBW3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <%= require('ejs!./header.ejs')({active: 'good-companies'}) %>
 <div class="top">
         <div class="good-companies container">
