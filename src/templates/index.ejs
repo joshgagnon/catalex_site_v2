@@ -7,9 +7,19 @@
     <link rel="icon"
           type="image/png"
           href="/favicon.png">
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5NXTBW3');</script>
+
+
 <title><%= htmlWebpackPlugin.options.title %></title>
   <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NXTBW3"
 
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <%= require('ejs!./header.ejs')({active: 'index'}) %>
 
 <section class="promo">
@@ -92,12 +102,12 @@
   <div class="container">
   <h1>CataLex | The Legal Catalyst</h1>
   <p>
-At CataLex, we aim to re-invent law or, more accurately, how the public interacts with it. We believe that by combining technology and innovative thinking, legal services can be more accessible, cost-effective, understandable, and, most importantly, useful to business. CataLex is developing software to deliver those services to professionals and businesses, absent the traditional lawyer-client relationship.
+Our mission is to make it easier to access law and legal services without a lawyer.  We develop innovative software to simplify and automate tasks traditionally reserved to the legal profession.  CataLex is the catalyst for positive change to the way businesses and the general public receive legal services.
   </p>
   </div>
 
+    <%= require('ejs!./newsletter.ejs')() %>
 </section>
-
 
 
     <%= require('ejs!./news.ejs')() %>
