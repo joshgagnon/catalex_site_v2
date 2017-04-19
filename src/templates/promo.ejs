@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html  lang="en">
   <head>
+      <%= require('ejs!./analytics.ejs')() %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content="CataLex - Reinventing Law"/>
@@ -10,11 +11,12 @@
           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.10/iframeResizer.contentWindow.min.js"></script>
 <title><%= htmlWebpackPlugin.options.title %></title>
   <body style="margin: 0;">
-
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NXTBW3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="promo promo-iframe">
 
   <div class="container">
-  <h1>Good Companies is here <a class="btn btn-primary" href="/good-companies.html" target="_blank">Click here to learn more</a></h1>
+  <h1>Good Companies is here <a class="btn btn-primary" href="/good-companies.html" target="_blank">Try it for free</a></h1>
 
   </div>
 

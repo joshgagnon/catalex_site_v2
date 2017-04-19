@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "run-dev": "webpack-dev-server",
+    "run-dev": "webpack-dev-server --port 8081",
     "build": "NODE_ENV=production webpack"
   },
   "dependencies": {
