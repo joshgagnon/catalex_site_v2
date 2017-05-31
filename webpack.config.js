@@ -104,7 +104,13 @@ module.exports = {
             hash: true,
              filename: 'promo.html',
             template: 'src/templates/promo.ejs'
-          })
+          })/*,
+        new HtmlWebpackPlugin({
+            title: 'CataLex®',
+            hash: true,
+             filename: 'gc-faq.html',
+            template: 'src/templates/gc-faq.ejs'
+          })*/
 
     ]
 }
