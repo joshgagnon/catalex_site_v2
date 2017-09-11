@@ -1,6 +1,8 @@
 $header-height: 150px;
 $header-height-sml: 75px;
 
+
+
 nav.navbar.simple-header{
     background-color: white;
     background-repeat: no-repeat;
@@ -56,7 +58,7 @@ nav.navbar.simple-header{
         border-radius: 1px;
             background-color: $text-color;
     }
-    @media (min-width: $screen-sm-min) {
+    @media (min-width: $grid-float-breakpoint) {
         height: 150px;
 
         .navbar-nav{
@@ -82,7 +84,7 @@ nav.navbar.simple-header{
             }
         }
     }
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $grid-float-breakpoint) {
         .navbar-nav{
             li{
 
