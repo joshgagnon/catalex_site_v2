@@ -20,12 +20,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 62%;
-
     text-shadow: 2px 2px 4px hsla(0, 0%, 0%, .4);
+
+    @media (max-width: $screen-md-min) {
+        width: 80%;
+    }
+
+    @media (max-width: $screen-sm-min) {
+        width: 90%;
+    }
 
     .hero-logo {
         max-height: 100px;
         margin-bottom: 18px;
+
+        @media (max-width: $screen-sm-min) {
+            max-height: 70px;
+        }
     }
     
     .hero-description {
@@ -35,7 +46,11 @@
         margin-top: 18px;
         position: relative;
 
-        &::after {
+        @media (max-width: $screen-sm-min) {
+            font-size: 22px;
+        }
+
+        &.first-hero-description::after {
             content: ' ';
             position: absolute;
             top: -24px;
