@@ -100,8 +100,41 @@
     }
 }
 
-.sub-hero-heading h2 {
-    font-weight: 300;
-    text-align: center;
-    font-size: 40px;
+.sign-content {
+    h2 {
+        font-weight: 300;
+        text-align: center;
+        font-size: 38px;
+        position: relative;
+        margin-top: 54px;
+        margin-bottom: 54px;
+
+        &::after {
+            content: ' ';
+            position: absolute;
+            bottom: -26px; // half of 54px margin, minus 1px to vertically center the 2px tall line
+            left: 50%;
+            transform: translateX(-50%);
+            width: 96px;
+            height: 2px;
+            background: black;
+        }
+    }
+
+    .feature {
+        .fa {
+            width: 48px;
+            position: absolute;
+            font-size: 32px;
+        }
+
+        .content {
+            padding-left: 48px;
+
+            h3 {
+                line-height: 32px;
+                vertical-align: middle;
+            }
+        }
+    }
 }
