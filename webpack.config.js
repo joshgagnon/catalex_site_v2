@@ -102,8 +102,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'CataLex®',
             hash: true,
-             filename: 'catalex-sign.html',
-            template: 'src/templates/catalex-sign.ejs',
+             filename: 'sign.html',
+            template: 'src/templates/sign.ejs',
             inject: 'body'
           }),
         new HtmlWebpackPlugin({
