@@ -178,6 +178,16 @@ $light-gray: #efefef;
 }
 
 .sign-content {
+    .btn-primary {
+        background: $deep-red;
+        border-color: $deep-red;
+
+        &:hover {
+            background: darken($deep-red, 8%);
+            border-color: darken($deep-red, 8%);
+        }
+    }
+
     h2 {
         font-weight: 700;
         text-align: center;
