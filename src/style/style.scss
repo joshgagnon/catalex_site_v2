@@ -50,3 +50,7 @@ $fa-font-path: "~font-awesome/fonts";
 @import "newsletter";
 @import "shame";
 @import "sign";
+
+p {
+	line-height: 1.5em;
+}

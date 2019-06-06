@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <%= require('ejs!./head.ejs')({htmlWebpackPlugin: htmlWebpackPlugin}) %>
+  <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NXTBW3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <%= require('ejs!./header.ejs')({active: 'sign'}) %>
+    
+    <div class="top sign-hero">
+        <div class="layer"></div>
+        <div class="hero-content">
+            <img class="hero-logo" src="/images/sign-logo.png" alt="CataLex Sign Logo"/>
+
+            <p class="hero-description first-hero-description">Sign documents online. <strong>Easy, quick, secure.</strong> Sign your own documents or invite others to sign.</p>
+            <p class="hero-description">Unlimited signing and invites for $5 a month.</p>
+
+            <a class="hero-button-primary" href="https://users.catalex.nz/auth/register?sign=true">Sign Up</a>
+            <a class="hero-button-secondary" href="https://users.catalex.nz/auth/login">Login</a>
+        </div>
+    </div>
+    
+    <%
+        var features = [{
+            iconName: 'thumbs-up',
+            title: 'Easy to use',
+            content: 'Upload your document, upload or draw your signature, and sign the document. Works on any device. No software download required.',
+        },{
+            iconName: 'users',
+            title: 'Invite others to sign',
+            content: 'Invite as many people as you like to sign a document. Add the names and email addresses of the signatories and CataLex Sign will send them a notification to sign the document. You can add a personalised message to that notification.',
+        },{
+            iconName: 'envelope',
+            title: 'Get notifications along the way',
+            content: 'CataLex Sign will notify you when signatories sign or reject your document, and when your document has been fully signed.',
+        },{
+            iconName: 'files-o',
+            title: 'Three free documents per month',
+            content: 'Sign or invite others to sign three documents per month free of charge.',
+        },{
+            iconName: 'upload',
+            title: 'Upload multiple documents for signing',
+            content: 'Create a document set with all the documents to be signed. Signatories can step through each document in a seamless execution process.',
+        },{
+            iconName: 'paste',
+            title: 'Mark where others should sign',
+            content: 'Add text boxes to your document to clearly mark where recipients are to sign, initial, or date the document. You can also customise text boxes, for details like names and addresses.',
+        },{
+            iconName: 'lock',
+            title: 'Securely store PDFs',
+            content: 'Documents you have signed, invited others to sign, or that have been fully signed, are securely stored and easily accessible.',
+        },{
+            iconName: 'certificate',
+            title: 'Verify documents haven’t been altered',
+            content: 'Any person can verify that a document has been signed by uploading it <a href="https://sign.catalex.nz/verify">here</a> to CataLex Sign. If the document was not signed with CataLex or has been tampered with, the verification will fail.',
+        },{
+            iconName: 'download',
+            title: 'Download and email signed documents',
+            content: 'Easily download signed documents or email them directly from CataLex Sign to one or more recipients. A simple way to provide your signatories with a copy of the signed documents.',
+        }];
+    %>
+
+    <div class="sign-content">
+        <section>
+            <div class="container">
+                <h2>Why use CataLex Sign?</h2>
+
+                <% for(var i = 0; i < features.length; i += 2) { %>
+
+                    <%
+                        var feature1 = features[i];
+                        var feature2 = features[i + 1];
+                    %>
+                    
+                    <div class="row feature-row">
+                    
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <i class="fa fa-<%= feature1.iconName %>"></i>
+                                <div class="content">
+                                    <h3><%= feature1.title %></h3>
+                                    <p><%= feature1.content %></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <% if (feature2 !== undefined) { %>
+                            <div class="col-md-6">
+                                <div class="feature">
+                                    <i class="fa fa-<%= feature2.iconName %>"></i>
+                                    <div class="content">
+                                        <h3><%= feature2.title %></h3>
+                                        <p><%= feature2.content %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
+                    
+                    </div>
+
+                <% } %>
+            </div>
+        </section>
+
+        <section class="odd">
+            <div class="container">
+                <h2>How It Works</h2>
+
+                <div class="videoWrapper">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TPn7yn5msX4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Pricing</h2>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-md-offset-2">
+                        <div class="pricing-option">
+                            <div class="option-price">0</div>
+                            <div class="option-name">Free</div>
+                            <div class="option-price-description">
+                                <br /><br />
+                            </div>
+
+                            <div class="option-content">
+                                <div>3 documents per month</div>
+                                <div>Notifications</div>
+                                <div>Multiple documents in a single <strong>Signing Session</strong></div>
+                                <div>Verify documents haven't been altered</div>
+                                <div>Email within Catalex Sign</div>
+                            </div>
+
+                            <div class="pricing-button-container">
+                                <a class="btn btn-default" href="https://users.catalex.nz/auth/register?redirectToSign=True">Sign Up Free</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="pricing-option unlimited">
+                            <div class="option-price">5</div>
+                            <div class="option-name">Pro</div>
+
+                            <div class="option-price-description">
+                                $5 per month when paid annually.<br />
+                                $6 per month when paid month to month.
+                            </div>
+
+                            <div class="option-content">
+                                <div><strong>Unlimited</strong> documents</div>
+                                <div>Invite others to sign</div>
+                                <div>Notifications</div>
+                                <div>Multiple documents in a single <strong>Signing Session</strong></div>
+                                <div>Verify documents haven't been altered</div>
+                                <div>Email within Catalex Sign</div>
+                            </div>
+
+                            <div class="pricing-button-container">
+                                <a class="btn btn-primary" href="https://users.catalex.nz/auth/register?sign=true">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="odd faq">
+            <div class="container">
+                <h2>FAQ</h2>
+
+                <h3>What do I get for free?</h3>
+                <p>The free version of CataLex Sign includes three signing sessions per month. There is no limit on the number of documents in each signing session.</p>
+                
+                <h3>What do I get with the paid subscription?</h3>
+                <p>Unlimited electronic signing and invites.</p>
+                
+                <h3>How much does it cost?</h3>
+                <p>$60 a year or $6 per month, per user (New Zealand dollars, GST inclusive).</p>
+                
+                <h3>As a free user, how many signing sessions can I receive from a single sender?</h3>
+                <p>15 signing sessions per year.  This limitation is designed to prevent abuse.  If your organisation needs to have more than 15 signing sessions with a single signatory in a year, you may need to purchase an additional licence to CataLex Sign.</p>
+                
+                <h3>Are electronic signatures legally compliant?</h3>
+                <p>It depends on the document you are signing, and on the jurisdiction in which you are signing. Some documents require an original signature by law. For those documents, an electronic signature will not suffice.</p>
+                <p>In New Zealand, the Contract and Commercial Law Act 2017 (“CCL”) allows generally for electronic signatures, save where original signatures are specifically required.  Accordingly, under New Zealand law, an electronic signature compliant with the CCL will be legally compliant in most cases.</p>
+                <p>CataLex Sign is compliant with the CCL.</p>
+                
+                <h3>How will people know a document has been signed in CataLex Sign?</h3>
+                <p>The public can check if a document has been validly signed in CataLex Sign by uploading it to: <a href="https://sign.catalex.nz/verify">https://sign.catalex.nz/verify.</a></p>
+                <p>The document will fail validation if it was not signed in CataLex Sign, or was edited after being signed (document title changes are okay).</p>
+            </div>
+        </section>
+    </div>
+
+    <%= require('ejs!./footer.ejs')() %>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-59849645-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
+  </body>
+</html>
